@@ -8,15 +8,21 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var billAmount: UITextField!
     @IBOutlet weak var tipAmount: UILabel!
     @IBOutlet weak var totalAmount: UILabel!
     @IBOutlet weak var tipPercentage: UILabel!
     
+    var billAmt: Float = 100.0
+    var tipPct: Float = 20.0
+    var tip: Float = 20.0
+    var total: Float = 120.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        billAmount.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -26,12 +32,27 @@ class CalculatorViewController: UIViewController {
     }
 
     @IBAction func onTipPercentageChanged(sender: UISlider) {
-        let p = sender.value
-        tipPercentage.text = "\(p)%"
+        tipPct = sender.value
+        tipPercentage.text = "\(tipPct)%"
+        updateFields()
     }
     
     @IBAction func onBillAmountChanged(sender: UITextField) {
-        println("Bill amount changed to \(sender.text as NSString)")
+        billAmt = (sender.text as NSString).floatValue
+        updateFields()
+    }
+    
+    func updateFields() {
+        println("billAmt: \(billAmt) * \(tipPct)")
+        tip = billAmt * (tipPct / 100)
+        total = billAmt + tip
+        tipAmount.text = "$\(tip)"
+        totalAmount.text = "$\(total)"
+    }
+
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+
+        return true;
     }
 
 }

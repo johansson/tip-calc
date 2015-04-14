@@ -78,6 +78,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="kPv-CA-mWf" firstAttribute="trailing" secondItem="tjA-pb-6LL" secondAttribute="trailing" id="0pk-9G-Dza"/>
                             <constraint firstItem="w4S-az-Zsu" firstAttribute="leading" secondItem="kPv-CA-mWf" secondAttribute="leading" id="6Jz-d3-KNZ"/>
@@ -98,6 +99,9 @@
                             <constraint firstItem="6Nb-3i-q7K" firstAttribute="leading" secondItem="RZP-wC-Uzt" secondAttribute="leading" id="wYx-Yp-i3x"/>
                             <constraint firstItem="0rx-fG-ujP" firstAttribute="centerX" secondItem="6Nb-3i-q7K" secondAttribute="centerX" id="wgw-nv-r2n"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sVv-Hw-TxL" appends="YES" id="Y3U-2z-d2O"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="billAmount" destination="tjA-pb-6LL" id="RsE-fl-hpO"/>
@@ -107,9 +111,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gon-rb-oIK">
+                <tapGestureRecognizer id="sVv-Hw-TxL">
                     <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="h6m-bs-23Y"/>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="sJd-Eh-Clo"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

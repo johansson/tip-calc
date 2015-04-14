@@ -14,6 +14,7 @@ Completed:
 * [] Optional: Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 * [x] Optional: Works on any size iOS (autolayout).
 * [x] Optional: Used slider to let the user slide the percentage.
+* [x] Optional: Limit user input for bill amount (can't delete $, can't add 2 .'s, can't add more than 2 decimal places)
 
 [Video Walkthrough](walkthrough.mov)
 [Video Walkthrough iPad](walkthrough-ipad.mov)

@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="width" constant="97" id="8iS-Pt-bTu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="onBillAmountChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="yIB-vK-b99"/>
                                 </connections>
@@ -107,6 +107,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gon-rb-oIK">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="h6m-bs-23Y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

@@ -32,8 +32,8 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func onTipPercentageChanged(sender: UISlider) {
-        tipPct = sender.value
-        tipPercentage.text = "\(tipPct)%"
+        tipPct = round(sender.value)
+        tipPercentage.text = String(format: "%.0f%%", tipPct)
         updateFields()
     }
     
@@ -43,17 +43,19 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateFields() {
-        println("billAmt: \(billAmt) * \(tipPct)")
         tip = billAmt * (tipPct / 100)
         total = billAmt + tip
-        tipAmount.text = "$\(tip)"
-        totalAmount.text = "$\(total)"
+        tipAmount.text = String(format: "$%.2f", tip)
+        totalAmount.text = String(format: "$%.2f", total)
     }
 
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
 
         return true;
     }
-
+    
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
 }
 

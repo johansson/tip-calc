@@ -14,15 +14,21 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tipAmount: UILabel!
     @IBOutlet weak var totalAmount: UILabel!
     @IBOutlet weak var tipPercentage: UILabel!
+    @IBOutlet weak var percentageSlider: UISlider!
     
     var billAmt: Float = 100.0
     var tipPct: Float = 20.0
     var tip: Float = 20.0
     var total: Float = 120.0
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         billAmount.delegate = self
+        tipPct = defaults.floatForKey("default_percentage")
+        percentageSlider.value = tipPct
+        updateFields()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -33,7 +39,6 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func onTipPercentageChanged(sender: UISlider) {
         tipPct = round(sender.value)
-        tipPercentage.text = String(format: "%.0f%%", tipPct)
         updateFields()
     }
     
@@ -49,6 +54,7 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         total = billAmt + tip
         tipAmount.text = String(format: "$%.2f", tip)
         totalAmount.text = String(format: "$%.2f", total)
+        tipPercentage.text = String(format: "%.0f%%", tipPct)
     }
 
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
@@ -72,6 +78,11 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
+    }
+    
+    @IBAction func onSwipe(sender: AnyObject) {
+        // go to settings
+        performSegueWithIdentifier("firstSegue", sender: self)
     }
 }
 

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE7AFD801ADCDA92007BEB1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AFD7F1ADCDA92007BEB1C /* AppDelegate.swift */; };
-		BE7AFD821ADCDA92007BEB1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AFD811ADCDA92007BEB1C /* ViewController.swift */; };
+		BE7AFD821ADCDA92007BEB1C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AFD811ADCDA92007BEB1C /* CalculatorViewController.swift */; };
 		BE7AFD851ADCDA92007BEB1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7AFD831ADCDA92007BEB1C /* Main.storyboard */; };
 		BE7AFD871ADCDA92007BEB1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE7AFD861ADCDA92007BEB1C /* Images.xcassets */; };
 		BE7AFD8A1ADCDA92007BEB1C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7AFD881ADCDA92007BEB1C /* LaunchScreen.xib */; };
@@ -29,7 +29,7 @@
 		BE7AFD7A1ADCDA92007BEB1C /* SwiftTipping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTipping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7AFD7E1ADCDA92007BEB1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE7AFD7F1ADCDA92007BEB1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE7AFD811ADCDA92007BEB1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE7AFD811ADCDA92007BEB1C /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		BE7AFD841ADCDA92007BEB1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE7AFD861ADCDA92007BEB1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BE7AFD891ADCDA92007BEB1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				BE7AFD7F1ADCDA92007BEB1C /* AppDelegate.swift */,
-				BE7AFD811ADCDA92007BEB1C /* ViewController.swift */,
+				BE7AFD811ADCDA92007BEB1C /* CalculatorViewController.swift */,
 				BE7AFD831ADCDA92007BEB1C /* Main.storyboard */,
 				BE7AFD861ADCDA92007BEB1C /* Images.xcassets */,
 				BE7AFD881ADCDA92007BEB1C /* LaunchScreen.xib */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE7AFD821ADCDA92007BEB1C /* ViewController.swift in Sources */,
+				BE7AFD821ADCDA92007BEB1C /* CalculatorViewController.swift in Sources */,
 				BE7AFD801ADCDA92007BEB1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +413,7 @@
 				BE7AFD9B1ADCDA92007BEB1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE7AFD9C1ADCDA92007BEB1C /* Build configuration list for PBXNativeTarget "SwiftTippingTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				BE7AFD9E1ADCDA92007BEB1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

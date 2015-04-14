@@ -15,6 +15,9 @@ Completed:
 * [x] Optional: Works on any size iOS (autolayout).
 * [x] Optional: Used slider to let the user slide the percentage.
 
-![Video Walkthrough](walkthrough.mov)
+[Video Walkthrough](walkthrough.mov)
+[Video Walkthrough iPad](walkthrough-ipad.mov)
+
+(lol licecap didn't seem to work, ignore the below, but enjoy the performance art :P)
 ![GIF Walkthrough](walkthrough.gif)
 

@@ -16,4 +16,5 @@ Completed:
 * [x] Optional: Used slider to let the user slide the percentage.
 
 ![Video Walkthrough](walkthrough.mov)
+![GIF Walkthrough](walkthrough.gif)
 
